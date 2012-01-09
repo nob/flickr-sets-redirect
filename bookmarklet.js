@@ -1,0 +1,1 @@
+javascript:(function(){if(window.location.hostname.match(/flickr\.com$/) && window.location.href.match(/^.+sets\/([0-9]+)\/?$/)){window.prompt('copy me.','http://flickr.noboruthedragon.com/'+RegExp.$1+'/');}else{alert('not valid url.');}})();
