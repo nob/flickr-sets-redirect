@@ -1,4 +1,4 @@
 <?php 
-if ($_GET['salt'] === 'LKybYurW4A') {
+if ($_POST['salt'] === 'LKybYurW4A') {
     `git pull`; 
 }
