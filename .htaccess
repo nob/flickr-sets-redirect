@@ -1,13 +1,10 @@
 Options -Indexes
 DirectoryIndex index.php
 
-#Disallow git related file access
-<Directory .git>
-order allow, deny
-deny from all
-</Directory>
-
 RewriteEngine on
+#Forbid access to git related files.
+RewriteRule ^(.*/)?\.git+ - [F,L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L]
